@@ -1801,7 +1801,7 @@ MESSAGE
     width:16px;
     height:16px;
     object-fit:contain;
-    pointer-events:none;
+    pointer-events:none; 
     transition:transform .3s ease,opacity .3s ease;
 }
 
