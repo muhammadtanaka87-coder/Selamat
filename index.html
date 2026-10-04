@@ -1,176 +1,261 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Special Gift</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- Font Awesome untuk ikon (opsional) -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=TE6S7AUcM4ZCbUmHCWtCI4X1EbBp-FzK3_hcccM7pAoOq1xRvTWgvjJ-h_F1RfqG4Jedl23891pqPYiF-AyrLw" charset="UTF-8"></script></head>
 <body>
 
-    <!-- Background Elements -->
-    <div class="background-bokeh"></div>
-    <div class="romantic-background" id="romanticBackground">
-        <div class="bg-glow glow-1"></div>
-        <div class="bg-glow glow-2"></div>
-        <div class="bg-glow glow-3"></div>
-        <div id="fireflies"></div>
+<div id="romanticBackground" class="romantic-background hidden">
+    <div class="bg-glow glow-1"></div>
+    <div class="bg-glow glow-2"></div>
+    <div class="bg-glow glow-3"></div>
+    <div id="fireflies"></div>
+</div>
+
+<!-- Section 1 Background -->
+<div class="background-bokeh"></div>
+
+
+<!-- ==========================
+SECTION 1
+========================== -->
+
+<section id="section-1" class="section section-1">
+
+    <div class="section-1-content">
+        <p class="title">
+            A Little Surprise
+        </p>
+        <p class="title second-title">
+            Just For You
+        </p>
+        <button class="button" id="section1Button">
+            <span class="button-text">
+                Open Your Surprise <span style="margin-left:10px;">➝</span>
+            </span>
+        </button>
+
     </div>
 
-    <!-- SECTION 1 -->
-    <section class="section section-1" id="section-1">
-        <div class="section-1-content">
-            <h1 class="title">Happy Birthday</h1>
-            <h1 class="title second-title">Sayang</h1>
-            <p class="section-1-subtitle">A Special Gift For You</p>
-            <button class="button" id="section1Button">
-                <span class="button-text">Buka Hadiah 🎁</span>
-            </button>
+</section>
+
+<!-- ==========================
+SECTION 2
+========================== -->
+
+<section id="section-2" class="section section-2">
+    <div class="section-2-content">
+        <p class="heart-title">
+            Sebelum lanjut aku ingin tau kamu sayang aku berapa persen
+        </p>
+        <div class="love-status-wrapper">
+            <div class="love-status">
+                <span id="lovePercent" class="love-percent">0%</span>
+                <span id="loveEmoji" class="love-emoji">🤬</span>
+            </div>
+            <p id="loveWarning" class="love-warning"></p>
         </div>
-    </section>
-
-    <!-- SECTION 2 -->
-    <section class="section section-2" id="section-2">
-        <div class="section-2-content">
-            <h2 class="heart-title">Tekan dan Tahan Hati Ini<br>Untuk Mengisi Cinta</h2>
-            
-            <div class="love-status-wrapper">
-                <div class="love-status">
-                    <span class="love-percent" id="lovePercent">0%</span>
-                    <span class="love-emoji" id="loveEmoji">😐</span>
-                </div>
-                <div class="love-warning" id="loveWarning"></div>
-            </div>
-
-            <div class="heart" id="heart">
-                <svg viewBox="0 0 100 100">
-                    <defs>
-                        <linearGradient id="heartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                            <stop offset="0%" style="stop-color:#ff4d6d;stop-opacity:1" />
-                            <stop offset="100%" style="stop-color:#ff8fab;stop-opacity:1" />
-                        </linearGradient>
-                    </defs>
-                    <path class="heart-outline" d="M50,85 C20,55 5,35 5,20 C5,5 20,0 35,0 C45,0 50,10 50,10 C50,10 55,0 65,0 C80,0 95,5 95,20 C95,35 80,55 50,85 Z" />
-                    <path class="heart-fill" d="M50,85 C20,55 5,35 5,20 C5,5 20,0 35,0 C45,0 50,10 50,10 C50,10 55,0 65,0 C80,0 95,5 95,20 C95,35 80,55 50,85 Z" />
-                </svg>
-            </div>
-            
-            <p class="heart-instruction" id="heartInstruction">Tahan terus...</p>
-            
-            <div class="heart-success" id="heartSuccess">
-                <p>Yeay! Cintamu 100% ❤️</p>
-            </div>
-
-            <button class="section-2-next" id="section2Next">Lanjut ➔</button>
+        <div id="heart" class="heart">
+            <svg viewBox="0 0 512 512">
+                <defs>
+                    <linearGradient id="heartGradient" x1="0" y1="1" x2="0" y2="0">
+                        <stop offset="0%" stop-color="#ff2d55"/>
+                        <stop offset="100%" stop-color="#ff8cc6"/>
+                    </linearGradient>
+                    <path id="heartPath" d="M256 472L220 439C90 320 24 250 24 156C24 82 82 24 156 24C202 24 238 46 256 82C274 46 310 24 356 24C430 24 488 82 488 156C488 250 422 320 292 439Z"/>
+                </defs>
+                <use href="#heartPath" class="heart-fill"></use>
+                <use href="#heartPath" class="heart-outline"></use>
+            </svg>
         </div>
-    </section>
+        <p id="heartInstruction" class="heart-instruction">
+            Klik dan tahan
+        </p>
+        <p id="heartSuccess" class="heart-success">
+            You Filled My Heart ❤️
+        </p>
+        <button id="section2Next" class="section-2-next">
+            NEXT →
+        </button>
+    </div>
+</section>
 
-    <!-- SECTION 3 -->
-    <section class="section section-3" id="section-3">
-        <div class="section-3-content">
-            <div class="section-3-header">
-                <h2 class="section-3-title">Momen Kita</h2>
-                <p class="section-3-subtitle">Geser untuk membuka kenangan</p>
-            </div>
+<!-- ==========================
+SECTION 3
+========================== -->
 
-            <div class="section-3-lock" id="section3Lock">
-                <p class="section-3-lock-title">Geser ke kanan untuk membuka</p>
+<section id="section-3" class="section section-3">
+    <div class="section-3-content">
+        <div class="section-3-header">
+            <h2 class="section-3-title">
+                Our Memories
+            </h2>
+            <p class="section-3-subtitle">
+                Slide the gift to unlock our gallery.
+            </p>
+        </div>
+        <div class="section-3-lock" id="section3Lock">
+            <h3 class="section-3-lock-title">
+                Slide to open gallery
+            </h3>
+            <div class="section-3-unlock">
                 <div class="section-3-track" id="section3Track">
                     <div class="section-3-progress" id="section3Progress"></div>
-                    <div class="section-3-slider" id="section3Slider" data-x="0">
-                        <span class="section-3-icon">❤️</span>
+                    <div class="section-3-slider" id="section3Slider">
+                        <span class="section-3-icon">🎁</span>
                     </div>
-                    <div class="section-3-text" id="section3Text"></div>
+                    <div class="section-3-text animate" id="section3Text"></div>
                 </div>
-            </div>
-
-            <div class="section-3-loading" id="section3Loading">
-                <span>❤</span><span>❤</span><span>❤</span><span>❤</span>
-            </div>
-
-            <div class="section-3-gallery" id="section3Gallery">
-                <div class="section-3-grid">
-                    <!-- GANTI src DENGAN NAMA FILE GAMBAR KAMU -->
-                    <img src="images/foto1.jpg" data-title="Momen 1" data-caption="Deskripsi foto 1">
-                    <img src="images/foto2.jpg" data-title="Momen 2" data-caption="Deskripsi foto 2">
-                    <img src="images/foto3.jpg" data-title="Momen 3" data-caption="Deskripsi foto 3">
-                    <img src="images/foto4.jpg" data-title="Momen 4" data-caption="Deskripsi foto 4">
-                    <img src="images/foto5.jpg" data-title="Momen 5" data-caption="Deskripsi foto 5">
-                    <img src="images/foto6.jpg" data-title="Momen 6" data-caption="Deskripsi foto 6">
-                </div>
-                <button class="section-3-next" id="section3Next">Lanjut ➔</button>
             </div>
         </div>
-
-        <!-- Preview Modal -->
-        <div class="section-3-preview" id="section3Preview">
-            <div class="section-3-preview-bg"></div>
-            <div class="section-3-preview-image-wrap">
-                <img id="section3PreviewImage" src="" alt="Preview">
-                <div class="section-3-preview-caption">
-                    <h3 id="section3CaptionTitle"></h3>
-                    <p id="section3CaptionText"></p>
-                </div>
-            </div>
-            <button class="section-3-preview-close" id="section3ClosePreview">✕</button>
-            <div class="section-3-preview-dots" id="section3Dots"></div>
-            <button class="section-3-preview-arrow prev" id="section3Prev">‹</button>
-            <button class="section-3-preview-arrow next" id="section3NextPreview">›</button>
+        <div class="section-3-loading" id="section3Loading">
+            <span>❤</span>
+            <span>❤</span>
+            <span>❤</span>
+            <span>❤</span>
         </div>
-    </section>
 
-    <!-- SECTION 4 -->
-    <section class="section section-4" id="section-4">
-        <canvas id="section4Canvas"></canvas>
-        <div class="section-4-content">
-            <h2 class="section-4-title">Untuk Kamu</h2>
-            <h1 class="section-4-name">Sayang</h1>
-            <div class="section-4-heart-wrap" id="section4HeartWrap">
-                <div class="section-4-heart">❤️</div>
+
+<!-- gallery -->        
+        <div class="section-3-gallery" id="section3Gallery">
+            <div class="section-3-grid">
+                <img src="img/gallery_1.jpg"
+                     alt="Memory 1"
+                     data-title="Senyummu"
+                     data-caption="Entah kenapa ya, tiap lihat kamu senyum rasanya moodku langsung ikut bagus. Sesimpel itu, tapi selalu berhasil.">
+
+                <img src="img/gallery_2.jpg"
+                     alt="Memory 2"
+                     data-title="Perhatianmu"
+                     data-caption="Aku suka caramu perhatian. Nggak harus yang besar-besar, justru hal-hal kecil yang kamu lakuin itu yang paling bikin aku merasa disayang.">
+
+                <img src="img/gallery_3.jpg"
+                     alt="Memory 3"
+                     data-title="Nyaman"
+                     data-caption="Kalau lagi sama kamu rasanya tenang aja. Bisa jadi diri sendiri tanpa harus pura-pura jadi orang lain.">
+
+                <img src="img/gallery_4.jpg"
+                     alt="Memory 4"
+                     data-title="Tawamu"
+                     data-caption="Aku paling suka denger kamu ketawa. Rasanya capek seharian langsung hilang cuma karena lihat kamu lagi bahagia.">
+
+                <img src="img/gallery_5.jpg"
+                     alt="Memory 5"
+                     data-title="Kamu"
+                     data-caption="Semakin lama kenal kamu, semakin banyak hal kecil yang bikin aku makin sayang. Mungkin kamu nggak sadar, tapi aku selalu notice itu.">
+
+                <img src="img/gallery_6.jpg"
+                     alt="Memory 6"
+                     data-title="Terima Kasih"
+                     data-caption="Jadi... makasih ya, udah hadir di hidupku. Semoga kita masih bisa bikin banyak cerita dan kenangan baru bareng. ❤️">
             </div>
+<!-- end of gallery -->
+
+ 
         </div>
-    </section>
-
-    <!-- SECTION 5 -->
-    <section class="section section-5" id="section-5">
-        <canvas id="section5Canvas"></canvas>
-        <div class="section-5-content">
-            <div class="section-5-gift" id="section5Gift">
-                <div class="section-5-box">
-                    <div class="section-5-lid"></div>
-                    <div class="section-5-ribbon-vertical"></div>
-                    <div class="section-5-ribbon-horizontal"></div>
-                </div>
-            </div>
-
-            <div class="section-5-message" id="section5Message">
-                <h2 class="section-5-title">Pesan Spesial</h2>
-                <div class="section-5-text">
-                    <p id="section5Typing"></p>
-                </div>
-                <button class="section-5-replay" id="section5Replay">Ulangi 🔄</button>
-            </div>
-        </div>
-    </section>
-
-    <!-- Audio & Musik -->
-    <audio id="bgMusic" loop>
-        <source src="music.mp3" type="audio/mpeg">
-    </audio>
-    <button class="music-toggle" id="musicToggle">
-        <img src="https://img.icons8.com/ios-filled/50/ffffff/musical-notes.png" alt="Music">
-    </button>
-
-    <!-- Teks Sumber untuk Typewriter (Disembunyikan) -->
-    <div id="section5Source" style="display:none;">
-        <p>Selamat ulang tahun sayang! 🎂</p>
-        <p>Semoga di hari spesial ini, kamu selalu diberikan kesehatan, kebahagiaan, dan semua impianmu bisa tercapai.</p>
-        <p>Terima kasih sudah menjadi bagian terindah dalam hidupku. Aku bersyukur banget bisa mengenal kamu.</p>
-        <p>Semoga kita selalu bersama, ya. ❤️</p>
+        <button id="section3Next" class="section-3-next">
+            Open Surprise →
+        </button>
     </div>
+</section>
 
-    <script src="script.js"></script>
+<div class="section-3-preview" id="section3Preview">
+    <div class="section-3-preview-bg"></div>
+    <div class="section-3-preview-image-wrap">
+        <img id="section3PreviewImage" src="" alt="">
+        <div class="section-3-preview-caption">
+            <h3 id="section3CaptionTitle"></h3>
+            <p id="section3CaptionText"></p>
+        </div>
+    </div>
+    <button id="section3Prev" class="section-3-preview-arrow prev">←</button>
+    <button id="section3NextPreview" class="section-3-preview-arrow next">→</button>
+    <div id="section3Dots" class="section-3-preview-dots"></div>
+    <button class="section-3-preview-close" id="section3ClosePreview">✕</button>
+</div>
+
+
+    <canvas id="section4Canvas"></canvas>
+    
+<!-- ==========================
+SECTION 4
+========================== -->
+
+<section id="section-4" class="section section-4">
+
+    <div class="section-4-content">
+        <h2 class="section-4-title">
+            Happy Birthday
+        </h2>
+        <h1 class="section-4-name">
+            Sindi
+        </h1>
+    </div>
+    <div class="section-4-heart-wrap">
+        <div class="section-4-heart">
+            ❤
+        </div>
+    </div>
+</section>
+
+<!-- ==========================
+SECTION 5
+========================== -->
+
+<section id="section-5" class="section section-5">
+    <canvas id="section5Canvas"></canvas>
+    <div class="section-5-content">
+        <div id="section5Gift" class="section-5-gift">
+            <div class="section-5-box">
+                <div class="section-5-lid"></div>
+                <div class="section-5-ribbon-vertical"></div>
+                <div class="section-5-ribbon-horizontal"></div>
+            </div>
+        </div>
+        
+        <div id="section5Message" class="section-5-message">
+
+            <h2 class="section-5-title">
+                A Little Wish For You
+            </h2>
+
+            <div id="section5Source" style="display:none;">
+                <p>Selamat ulang tahun ya sayang.</p>
+                
+                <p>Semoga hari ini menjadi awal dari banyak kebahagiaan baru. Semoga semua doa dan impianmu satu per satu menjadi kenyataan. </p>
+
+                <p>Terima kasih sudah hadir dan menjadi bagian terindah dalam hidupku.</p>
+
+                <p>I Love You ❤️</p>
+            </div>
+
+            <p class="section-5-text">
+                <span id="section5Typing"></span>
+            </p>
+    
+            <button id="section5Replay" class="section-5-replay">
+                ↻ REPLAY
+            </button>
+
+        </div>
+    </div>
+</section>
+
+<audio id="bgMusic" loop>
+    <source src="music/monokrom.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicToggle" class="music-toggle">
+    <img id="musicIcon" src="img/music.png" alt="Music">
+</button>
+
+<script src="script.js"></script>
+
 </body>
 </html>
